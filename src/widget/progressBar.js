@@ -10,7 +10,7 @@ export function progressBar(nameId){
         </div>
       </div>
       <div class=progress-bar__parameter>
-        <label class=progress-bar__value><input id='inpValProg' type='number'/> Value</label>
+        <label class=progress-bar__value><input id='inpValProg' value='100' type='number'/> Value</label>
 
         <div class="progress-bar__toggle-container toggle-container">
           <label class="toggle-container__switch">
@@ -43,8 +43,10 @@ export function progressBar(nameId){
 
     document.getElementById('inpValProg').addEventListener('keydown', function(event){
       if(event.key === 'Enter'){
-        let value = this.value;
-        barProg.style.background = `conic-gradient(#007bff ${3.6*value}deg,  white 0deg)`;
+        if(this.value >= 0 && this.value <= 100){ 
+          let value = this.value;
+          barProg.style.background = `conic-gradient(#007bff ${3.6*value}deg,  white 0deg)`;
+        }
       }
     });
 
