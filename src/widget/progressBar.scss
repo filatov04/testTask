@@ -52,6 +52,7 @@ $animation-duration: 10s;
         }
         input[type="number"] {
             -moz-appearance: textfield;
+            appearance: textfield;
             box-sizing: border-box;
             width: 42px;
             height: 28px;
