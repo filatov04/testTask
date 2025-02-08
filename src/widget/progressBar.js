@@ -41,14 +41,18 @@ export function progressBar(nameId){
       circular.classList.toggle("animation", this.checked);
     });
 
-    document.getElementById('inpValProg').addEventListener('keydown', function(event){
-      if(event.key === 'Enter'){
-        if(this.value >= 0 && this.value <= 100){ 
-          let value = this.value;
-          barProg.style.background = `conic-gradient(#007bff ${3.6*value}deg,  white 0deg)`;
-        }
+    document.getElementById('inpValProg').addEventListener('keydown', updateProgress);
+    document.getElementById('inpValProg').addEventListener('blur', updateProgress);
+    
+    function updateProgress(event) {
+      if (event.type === 'keydown' && event.key !== 'Enter') {
+        return;
       }
-    });
+  
+      if (this.value >= 0 && this.value <= 100) {
+        barProg.style.background = `conic-gradient(#007bff ${3.6 * this.value}deg, white 0deg)`;
+      }
+    }
 
     hide.addEventListener("change", function(){
       circular.classList.toggle('hide', this.checked)
