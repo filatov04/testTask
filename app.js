@@ -1,4 +1,3 @@
-import './src/widget/progressBar.js';
 import { progressBar } from './src/widget/progressBar.js';
 import './app.scss';
 
