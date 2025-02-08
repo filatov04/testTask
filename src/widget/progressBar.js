@@ -1,4 +1,4 @@
-import './progressBar.scss';
+import './progressBar.css';
 
 export function progressBar(nameId){
   document.querySelector(nameId).innerHTML = `

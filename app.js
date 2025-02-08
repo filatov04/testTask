@@ -1,5 +1,5 @@
-import { progressBar } from './widget/progressBar.js';
-import './app.scss';
+import { progressBar } from './src/widget/progressBar.js';
+import './app.css';
 
 document.querySelector('#app').innerHTML = `
   <main id='main'>
