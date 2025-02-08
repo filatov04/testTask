@@ -1,4 +1,4 @@
-import { progressBar } from './src/widget/progressBar.js';
+import { progressBar } from './widget/progressBar.js';
 import './app.scss';
 
 document.querySelector('#app').innerHTML = `
