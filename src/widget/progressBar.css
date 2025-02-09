@@ -12,14 +12,14 @@
     justify-content: center;
   }
   .progress-bar__progress-bar div:nth-child(1) {
-    width: 150px;
+    width: 60%;
     aspect-ratio: 1;
     background: conic-gradient(#007bff 360deg, white 0deg);
     border-radius: 50%;
   }
   .progress-bar__progress-bar div:nth-child(2) {
     position: absolute;
-    width: 130px;
+    width: 52%;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: white;
